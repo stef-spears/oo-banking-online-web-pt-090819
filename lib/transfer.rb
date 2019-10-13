@@ -1,6 +1,8 @@
 class Transfer
+  
+  attr_accessor
 
-  def initialize(x,y,z)
+  def initialize(sender, receiver, amount)
   end 
 
 

@@ -17,7 +17,7 @@ class Transfer
   end
 
   def execute_transaction
- 
+ binding.pry
  
   if !sender.valid? || self.status = "complete"
    self.status = "rejected"
@@ -29,7 +29,7 @@ class Transfer
   end
  
  
-  binding.pry
+  
  end
 
 end

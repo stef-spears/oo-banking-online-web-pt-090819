@@ -15,7 +15,7 @@ class Transfer
   end
 
   def execute_transaction 
-    
+    receiver.
   end 
 
 end

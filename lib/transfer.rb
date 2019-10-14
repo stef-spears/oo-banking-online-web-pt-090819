@@ -20,7 +20,7 @@ class Transfer
     sender.balance -= amount
     receiver.deposit(amount)
     self.status = "complete"
-   # binding.pry 
+   binding.pry 
   end 
 
 end

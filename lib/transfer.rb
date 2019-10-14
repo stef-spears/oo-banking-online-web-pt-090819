@@ -18,7 +18,7 @@ class Transfer
 
   def execute_transaction
   binding.pry
-  if sender.balance < amount
+  if !sender.balance < amount
     
     
     self.status = "rejected"

@@ -17,10 +17,12 @@ class Transfer
   end
 
   def execute_transaction
+    if self.status != "complete"
     sender.balance -= amount
     receiver.deposit(amount)
     self.status = "complete"
-   binding.pry 
+  else self.status = "rejected"
+   end
   end 
 
 end

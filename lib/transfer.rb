@@ -17,10 +17,10 @@ class Transfer
   end
 
   def execute_transaction
-  
+  binding.pry
   if sender.balance < amount
     
-    binding.pry
+    
     self.status = "rejected"
       p "Transaction rejected. Please check your account balance."
     elsif 

@@ -23,20 +23,17 @@ class Transfer
   
 
   def execute_transaction
-    
- #binding.pry
- 
-  if !sender.valid? || self.status == "complete"
-    reject
-  elsif !receiver.valid? || sender.balance < amount
-    reject 
-  else 
-    sender.balance -= amount
-    receiver.deposit(amount)
-    self.status = "complete"
-    
+    if !sender.valid? || self.status == "complete"
+      reject
+    elsif !receiver.valid? || sender.balance < amount
+      reject 
+        else 
+      sender.balance -= amount
+      receiver.deposit(amount)
+      self.status = "complete"
+    end
   end
   
- end
+  
 
 end

@@ -16,6 +16,7 @@ class Transfer
 
   def execute_transaction 
     receiver.deposit(amount)
+    display_balance
   end 
 
 end

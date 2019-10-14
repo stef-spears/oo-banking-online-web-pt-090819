@@ -22,15 +22,17 @@ class Transfer
   if !sender.valid?
    self.status = "rejected"
     p "Transaction rejected. Please check your account balance."
+  else 
+    sender.balance -= amount
+    receiver.deposit(amount)
+    self.status = "complete"
   end
  
  
  
   #if !receiver.valid? || sender.balance < amount
    #   self.status != "complete" && sender.balance >= amount
-     #   sender.balance -= amount
-     #   receiver.deposit(amount)
-      #  self.status = "complete"
+     #   
    # end
   end 
 

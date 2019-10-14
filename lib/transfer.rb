@@ -35,11 +35,13 @@ class Transfer
   end
   
   def reverse_transfer
-    new_sender = receiver 
-    new_receiver = sender
-    new_transfer = Transfer.new(new_sender, new_receiver, amount)
-    new_transfer.execute_transaction
-    self.status = "reversed"
+    if self.status == "complete"
+      new_sender = receiver 
+      new_receiver = sender
+      new_transfer = Transfer.new(new_sender, new_receiver, amount)
+      new_transfer.execute_transaction
+      self.status = "reversed"
+    end
   end 
 
 end

@@ -11,7 +11,7 @@ class Transfer
   end 
 
   def valid? 
-    BankAccount.all.
+    sender.valid? && receiver.valid?
   end
 
 

@@ -35,6 +35,10 @@ class Transfer
   end
   
   def reverse_transfer
+    new_sender = receiver 
+    new_receiver = sender
+    self.new(new_sender, new_receiver, amount)
+    self.execute_transaction
     self.status = "reversed"
   end 
 

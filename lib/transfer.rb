@@ -23,7 +23,7 @@ class Transfer
   if !sender.valid? || self.status == "complete"
     self.status = "rejected"
     p "Transaction rejected. Please check your account balance."
-  elsif !receiver.valid?
+  elsif !receiver.valid? || sender.balance < amount
     self.status = "rejected"
     p "Transaction rejected. Please check your account balance."
   else 
